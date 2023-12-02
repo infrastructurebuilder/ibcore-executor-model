@@ -1,0 +1,97 @@
+#
+# @formatter:off
+# Copyright © 2019 admin (admin@infrastructurebuilder.org)
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# @formatter:on
+#
+
+---
+"$schema": https://json-schema.org/draft/2020-12/schema
+"$id": https://infrastructurebuilder.org/schemas/generated-process-execution-result
+title: GeneratedProcessExecutionResult
+description: A return type for a GeneratedProcessExecution
+javaType: "${project.groupId}.executor.model.v${apiVersionSafe}.GeneratedProcessExecutionResult"
+type: object
+properties:
+  modelVersion:
+    type: string
+    default: "${apiVersion}"
+    exclusiveMinimum: 0
+  id:
+    type: string
+    exclusiveMinimum: 0
+  start:
+    type: string
+    exclusiveMinimum: 0
+  runTime:
+    type: string
+    exclusiveMinimum: 0
+  resultCode:
+    type: string
+  stdOut:
+    type: array
+    items:
+      type: string
+  stdErr:
+    type: array
+    items:
+      type: string
+  environment:
+    "$ref": environment.schema.yaml
+  executionException:
+    type: object
+    properties:
+      klass:
+        type: string
+        exclusiveMinimum: 0
+      message:
+        type: string
+      stack:
+        type: array
+        items:
+          type: object
+          properties:
+            declaringClass:
+              type: string
+            fileName:
+              type: string
+            lineNumber:
+              type: integer
+            methodName:
+              type: string
+            moduleName:
+              type: string
+            moduleVersion:
+              type: string
+            classLoaderName:
+              type: string
+          required:
+          - declaringClass
+    required:
+    - klass
+  stdOutPath:
+    type: string
+  stdErrPath:
+    type: string
+  stdInPath:
+    type: string
+  relativeRootURL:
+    type: string
+required:
+- modelVersion
+- id
+- executable
+- start
+- runTime
+- environment
