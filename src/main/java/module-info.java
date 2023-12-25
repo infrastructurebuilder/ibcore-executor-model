@@ -15,7 +15,8 @@
  * limitations under the License.
  * @formatter:on
  */
-module org.infrastructurebuilder.util.executor.model.executor.model.v1_0 {
+module org.infrastructurebuilder.util.executor.model.executor.model.utils {
+  exports org.infrastructurebuilder.util.executor.model.executor.model.utils;
   exports org.infrastructurebuilder.util.executor.model.executor.model.v1_0;
   requires transitive org.infrastructurebuilder.exceptions;
   requires transitive java.xml;
@@ -24,4 +25,7 @@ module org.infrastructurebuilder.util.executor.model.executor.model.v1_0 {
   requires java.compiler;
   requires javax.inject;
   requires com.fasterxml.jackson.annotation;
+  requires com.fasterxml.jackson.databind;
+  requires com.fasterxml.jackson.datatype.jdk8;
+  requires com.fasterxml.jackson.datatype.jsr310;
 }
