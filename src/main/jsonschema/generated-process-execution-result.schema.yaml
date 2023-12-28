@@ -33,6 +33,8 @@ properties:
     exclusiveMinimum: 0
   start:
     type: string
+    format: date-time
+    customDateTimePattern: ${expected.instant.format}
     exclusiveMinimum: 0
   runTime:
     type: string
