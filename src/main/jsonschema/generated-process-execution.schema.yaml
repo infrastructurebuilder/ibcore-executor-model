@@ -16,66 +16,51 @@
 # @formatter:on
 #
 
-{
-  "$schema" : "https://json-schema.org/draft/2020-12/schema",
-  "$id" : "https://infrastructurebuilder.org/schemas/generated-process-execution",
-  "title" : "GeneratedProcessExecution",
-  "description" : "A modeled reference for process executions",
-  "javaType" : "${project.groupId}.executor.model.v${apiVersionSafe}.GeneratedProcessExecution",
-  "type" : "object",
-  "properties" : {
-    "modelVersion" : {
-      "type" : "string",
-      "default" : "${apiVersion}",
-      "exclusiveMinimum" : 0
-    },
-    "id" : {
-      "type" : "string",
-      "exclusiveMinimum" : 0
-    },
-    "executable" : {
-      "type" : "string",
-      "exclusiveMinimum" : 0
-    },
-    "arguments" : {
-      "type" : "array",
-      "items" : {
-        "type" : "string"
-      }
-    },
-    "timeout" : {
-      "type" : "string"
-    },
-    "optional" : {
-      "type" : "boolean"
-    },
-    "background" : {
-      "type" : "boolean"
-    },
-    "workDirectory" : {
-      "type" : "string"
-    },
-    "exitValues" : {
-      "type" : "array",
-      "items" : {
-        "type" : "string"
-      }
-    },
-    "stdOutPath" : {
-      "type" : "string"
-    },
-    "stdErrPath" : {
-      "type" : "string"
-    },
-    "stdInPath" : {
-      "type" : "string"
-    },
-    "relativeRootURL" : {
-      "type" : "string"
-    },
-    "environment" : {
-      "$ref" : "environment.schema.yaml"
-    }
-  },
-  "required" : [ "modelVersion", "id", "executable" ]
-}
+---
+"$schema": https://json-schema.org/draft/2020-12/schema
+"$id": https://infrastructurebuilder.org/schemas/generated-process-execution
+title: GeneratedProcessExecution
+description: A modeled reference for process executions
+javaType: "${project.groupId}.executor.model.v${apiVersionSafe}.GeneratedProcessExecution"
+type: object
+properties:
+  modelVersion:
+    type: string
+    default: "${apiVersion}"
+    exclusiveMinimum: 0
+  id:
+    type: string
+    exclusiveMinimum: 0
+  executable:
+    type: string
+    exclusiveMinimum: 0
+  arguments:
+    type: array
+    items:
+      type: string
+  timeout:
+    type: string
+  optional:
+    type: boolean
+  background:
+    type: boolean
+  workDirectory:
+    type: string
+  exitValues:
+    type: array
+    items:
+      type: string
+  stdOutPath:
+    type: string
+  stdErrPath:
+    type: string
+  stdInPath:
+    type: string
+  relativeRootURL:
+    type: string
+  environment:
+    "$ref": environment.schema.yaml
+required:
+- modelVersion
+- id
+- executable

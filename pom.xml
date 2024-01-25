@@ -25,7 +25,7 @@
 	<parent>
 		<groupId>org.infrastructurebuilder</groupId>
 		<artifactId>ibparent</artifactId>
-		<version>101-SNAPSHOT</version>
+		<version>101</version>
 	</parent>
 
 	<groupId>org.infrastructurebuilder.util.executor.model</groupId>
@@ -46,6 +46,11 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.infrastructurebuilder</groupId>
+			<artifactId>ibcore-object-mapper-jackson</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
 		<dependency>
 			<groupId>io.avaje</groupId>
 			<artifactId>javax.inject</artifactId>

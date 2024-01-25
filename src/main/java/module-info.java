@@ -19,6 +19,7 @@ module org.infrastructurebuilder.util.executor.model.executor.model.utils {
   exports org.infrastructurebuilder.util.executor.model.executor.model.utils;
   exports org.infrastructurebuilder.util.executor.model.executor.model.v1_0;
   requires transitive org.infrastructurebuilder.exceptions;
+  requires transitive org.infrastructurebuilder.objectmapper.jackson;
   requires transitive java.xml;
   requires transitive java.desktop;
   requires io.avaje.jsr305x;
