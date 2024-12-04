@@ -25,7 +25,7 @@
 	<parent>
 		<groupId>org.infrastructurebuilder</groupId>
 		<artifactId>ibparent</artifactId>
-		<version>101</version>
+		<version>103</version>
 	</parent>
 
 	<groupId>org.infrastructurebuilder.util.executor.model</groupId>
@@ -38,18 +38,27 @@
 	<!-- URL for site gen -->
 	<url>${github.url.base}/${project.artifactId}</url>
 
+	<scm>
+		<connection>scm:git:${git.url}</connection>
+		<url>${git.scm.url}</url>
+		<developerConnection>scm:git:${git.url}</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+
 	<properties>
+		<git.url.base>git@github.com:${team.group.id}</git.url.base>
+		<git.url>${git.url.base}/${project.artifactId}.git</git.url>
 		<test.coverage.percentage.required>01</test.coverage.percentage.required>
 		<jacoco.max.missed.classes>99</jacoco.max.missed.classes>
 		<surefire.failIfNoTests>false</surefire.failIfNoTests>
-		<ib.exceptions.version>101-SNAPSHOT</ib.exceptions.version>
+		<ib.exceptions.version>103</ib.exceptions.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.infrastructurebuilder</groupId>
 			<artifactId>ibcore-object-mapper-jackson</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>io.avaje</groupId>
