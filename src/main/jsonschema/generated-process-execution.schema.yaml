@@ -1,0 +1,66 @@
+#
+# @formatter:off
+# Copyright © 2019 admin (admin@infrastructurebuilder.org)
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# @formatter:on
+#
+
+---
+"$schema": https://json-schema.org/draft/2020-12/schema
+"$id": https://infrastructurebuilder.org/schemas/generated-process-execution
+title: GeneratedProcessExecution
+description: A modeled reference for process executions
+javaType: "${project.groupId}.executor.model.v${apiVersionSafe}.GeneratedProcessExecution"
+type: object
+properties:
+  modelVersion:
+    type: string
+    default: "${apiVersion}"
+    exclusiveMinimum: 0
+  id:
+    type: string
+    exclusiveMinimum: 0
+  executable:
+    type: string
+    exclusiveMinimum: 0
+  arguments:
+    type: array
+    items:
+      type: string
+  timeout:
+    type: string
+  optional:
+    type: boolean
+  background:
+    type: boolean
+  workDirectory:
+    type: string
+  exitValues:
+    type: array
+    items:
+      type: string
+  stdOutPath:
+    type: string
+  stdErrPath:
+    type: string
+  stdInPath:
+    type: string
+  relativeRootURL:
+    type: string
+  environment:
+    "$ref": environment.schema.yaml
+required:
+- modelVersion
+- id
+- executable
