@@ -25,7 +25,7 @@
 	<parent>
 		<groupId>org.infrastructurebuilder</groupId>
 		<artifactId>ibparent</artifactId>
-		<version>103</version>
+		<version>104-SNAPSHOT</version>
 	</parent>
 
 	<groupId>org.infrastructurebuilder.util.executor.model</groupId>
@@ -51,7 +51,6 @@
 		<test.coverage.percentage.required>01</test.coverage.percentage.required>
 		<jacoco.max.missed.classes>99</jacoco.max.missed.classes>
 		<surefire.failIfNoTests>false</surefire.failIfNoTests>
-		<ib.exceptions.version>103</ib.exceptions.version>
 	</properties>
 
 	<dependencies>
@@ -72,18 +71,13 @@
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
 		</dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.datatype</groupId>
-      <artifactId>jackson-datatype-jsr310</artifactId>
-    </dependency>
-			<dependency>
-				<groupId>com.fasterxml.jackson.datatype</groupId>
-				<artifactId>jackson-datatype-jdk8</artifactId>
-			</dependency>
 		<dependency>
-			<groupId>org.infrastructurebuilder</groupId>
-			<artifactId>ibexceptions</artifactId>
-			<version>${ib.exceptions.version}</version>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jsr310</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jdk8</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
@@ -111,7 +105,8 @@
 				<executions>
 					<execution>
 						<id>default</id>
-						<phase>validate</phase> <!-- Needs to be before resource filtering -->
+						<phase>validate</phase> <!-- Needs to be before resource
+						filtering -->
 						<goals>
 							<goal>generate-source-version</goal>
 							<goal>generate-test-version</goal>

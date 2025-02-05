@@ -56,7 +56,7 @@ properties:
     type: string
   stdInPath:
     type: string
-  relativeRootURL:
+  pathRefURI:
     type: string
   environment:
     "$ref": environment.schema.yaml
