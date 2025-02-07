@@ -21,7 +21,7 @@
 "$id": https://infrastructurebuilder.org/schemas/generated-process-execution
 title: GeneratedProcessExecution
 description: A modeled reference for process executions
-javaType: "${project.groupId}.executor.model.v${apiVersionSafe}.GeneratedProcessExecution"
+javaType: "${project.groupId}.v${apiVersionSafe}.GeneratedProcessExecution"
 type: object
 properties:
   modelVersion:

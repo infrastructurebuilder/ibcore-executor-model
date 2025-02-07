@@ -15,7 +15,7 @@
  * limitations under the License.
  * @formatter:on
  */
-package org.infrastructurebuilder.util.executor.model.executor.model.utils;
+package org.infrastructurebuilder.util.executor.model.utils;
 
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -42,10 +42,6 @@ public class IBCoreExecutorModelUtils {
       }
     }
     return mapper.get();
-  }
-
-  public IBCoreExecutorModelUtils() {
-    // TODO Auto-generated constructor stub
   }
 
 }
