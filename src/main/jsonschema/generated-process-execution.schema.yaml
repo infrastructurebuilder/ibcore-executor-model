@@ -38,6 +38,9 @@ properties:
     type: array
     items:
       type: string
+  root: # URI of the root element
+    type: string
+    description: "pathref:key: representation of the root of the pathref filesystem for all generated and incindental data"
   timeout:
     type: string
   optional:
@@ -52,16 +55,21 @@ properties:
       type: string
   stdOutPath:
     type: string
+    description: |-
+       Must be relative paths strings for the root PRFS
   stdErrPath:
     type: string
+    description: |-
+       Must be relative paths strings for the root PRFS
   stdInPath:
     type: string
-  root: # URI of the root element
-    type: string
-    description: "pathref:key: representation of the root of the pathref filesystem for all data"
+    description: |-
+       Must be relative paths strings for the root PRFS
   environment:
     "$ref": environment.schema.yaml
 required:
 - modelVersion
 - id
 - executable
+- arguments
+- root
