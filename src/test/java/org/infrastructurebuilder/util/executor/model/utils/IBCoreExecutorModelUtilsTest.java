@@ -34,7 +34,6 @@ class IBCoreExecutorModelUtilsTest {
   void setUp() throws Exception {
   }
 
-
   @Test
   void test() {
     assertNotNull(new IBCoreExecutorModelUtils());
