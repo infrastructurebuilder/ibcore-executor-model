@@ -18,7 +18,7 @@
 
 ---
 "$schema": https://json-schema.org/draft/2020-12/schema
-"$id": https://infrastructurebuilder.org/schemas/generated-process-execution-result
+"$id": https://infrastructurebuilder.org/util/executor/model/v${apiVersionSafe}/generated-process-execution-result.schema.json
 title: GeneratedProcessExecutionResult
 description: A return type for a GeneratedProcessExecution
 javaType: "${project.groupId}.v${apiVersionSafe}.GeneratedProcessExecutionResult"
@@ -50,13 +50,12 @@ properties:
     items:
       type: string
   environment:
-    "$ref": environment.schema.yaml
+    "$ref": environment.schema.json
   executionException:
     type: object
     properties:
       klass:
         type: string
-        exclusiveMinimum: 0
       message:
         type: string
       stack:

@@ -18,7 +18,7 @@
 
 ---
 "$schema": https://json-schema.org/draft/2020-12/schema
-"$id": "/schemas/environment.schema.yaml"
+"$id": https://infrastructurebuilder.org/util/executor/model/v${apiVersionSafe}/environment.schema.json
 title: Environment
 description: A modeled reference for process executions
 javaType: "${project.groupId}.v${apiVersionSafe}.Environment"
@@ -26,6 +26,7 @@ type: object
 properties:
   envEntry:
     type: array
+    uniqueItems: true
     items:
       type: object
       properties:

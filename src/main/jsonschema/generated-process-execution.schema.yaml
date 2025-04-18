@@ -18,7 +18,7 @@
 
 ---
 "$schema": https://json-schema.org/draft/2020-12/schema
-"$id": https://infrastructurebuilder.org/schemas/generated-process-execution
+"$id": https://infrastructurebuilder.org/util/executor/model/v${apiVersionSafe}/generated-process-execution.schema.json
 title: GeneratedProcessExecution
 description: A modeled reference for process executions
 javaType: "${project.groupId}.v${apiVersionSafe}.GeneratedProcessExecution"
@@ -66,7 +66,7 @@ properties:
     description: |-
        Must be relative paths strings for the root PRFS
   environment:
-    "$ref": environment.schema.yaml
+    "$ref": environment.schema.json
 required:
 - modelVersion
 - id
